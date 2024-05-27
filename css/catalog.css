@@ -392,6 +392,12 @@
         height: 254px;
         /* object-fit: contain; */
     }
+    .slider-section {
+        margin: 35px auto;
+    }
+    .slider-item {
+        min-width: 131px;
+    }
 }
 
 @media screen and (max-width: 588px) {

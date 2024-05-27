@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Светодиодная, люминисцентная продукция - компания Трепласт</title>
+    <title>Светодиодная, люминисцентная продукция купить - компания Трепласт</title>
     <meta name="description"
         content="Belintegra - лидер в производстве светотехники РБ. Большой каталог светодиодной продукции по выгодным ценам">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,26 +16,26 @@
     <link rel="shortcut icon" href="../assets/images/fav1.png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../../html/vendor/bootstrap-5.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../html/vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../html/vendor/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../../html/vendor/jQueryFormStyler/dist/jquery.formstyler.css">
-    <link rel="stylesheet" href="../../html/vendor/jQueryFormStyler/dist/jquery.formstyler.theme-custom.css">
-    <link rel="stylesheet" href="../../html/css/magnific-popup.css">
-    <link rel="stylesheet" href="../../html/fonts/Gilroy/stylesheet.css">
-    <link rel="stylesheet" href="../../html/vendor/jquery-ui-1.12.1/jquery-ui.min.css">
-    <link rel="stylesheet" href="../../html/vendor/jquery-ui-1.12.1/jquery-ui.theme.min.css">
-    <link rel="stylesheet" href="../../html/vendor/fancybox/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="../../html/css/main.css">
-    <link rel="stylesheet" href="../../html/css/custom.css?7">
+    <link rel="stylesheet" href="../html/vendor/bootstrap-5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../html/vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../html/vendor/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../html/vendor/jQueryFormStyler/dist/jquery.formstyler.css">
+    <link rel="stylesheet" href="../html/vendor/jQueryFormStyler/dist/jquery.formstyler.theme-custom.css">
+    <link rel="stylesheet" href="../html/css/magnific-popup.css">
+    <link rel="stylesheet" href="../html/fonts/Gilroy/stylesheet.css">
+    <link rel="stylesheet" href="../html/vendor/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="../html/vendor/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="../html/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../html/css/main.css">
+    <link rel="stylesheet" href="../html/css/custom.css?7">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/catalog.css">
-    <script src="../../html/js/jquery-3.5.1.min.js"></script>
-    <script src="../../html/js/popper.min.js"></script>
-    <script src="../../html/js/jquery.magnific-popup.min.js"></script>
-    <script src="../../html/js/util.js"></script>
-    <script src="../../html/js/collapse.js"></script>
-    <script src="../../html/js/jquery.tablesorter.min.js"></script>
+    <script src="../html/js/jquery-3.5.1.min.js"></script>
+    <script src="../html/js/popper.min.js"></script>
+    <script src="../html/js/jquery.magnific-popup.min.js"></script>
+    <script src="../html/js/util.js"></script>
+    <script src="../html/js/collapse.js"></script>
+    <script src="../html/js/jquery.tablesorter.min.js"></script>
 
 </head>
 
@@ -342,7 +342,33 @@
                 </div>
             </footer>
         </div>
-
+        <script>
+            let currentIndex = 0;
+            const slider = document.getElementById('custom-slider');
+            const items = document.querySelectorAll('.slider-item');
+            const itemsToShow = Math.floor(slider.parentElement.clientWidth / 200); // Calculate the number of items to show based on the container width
+    
+            function moveSlide(direction) {
+                const totalItems = items.length;
+    
+                currentIndex += direction;
+    
+                if (currentIndex < 0) {
+                    currentIndex = totalItems - itemsToShow;
+                } else if (currentIndex >= totalItems - itemsToShow + 1) {
+                    currentIndex = 0;
+                }
+    
+                const offset = -currentIndex * 200; // 200 is the width of each item
+                slider.style.transform = `translateX(${offset}px)`;
+            }
+    
+            window.addEventListener('resize', () => {
+                currentIndex = 0; // Reset index on resize to prevent misalignment
+                moveSlide(0); // Recalculate items to show and update slide position
+            });
+    
+        </script>
         <script>
             $('.open-popup-link').magnificPopup({
                 type: 'inline',
@@ -362,48 +388,20 @@
 
     </div>
 
-    <script src="../../html/vendor/bootstrap-5.0.2/js/bootstrap.min.js"></script>
-    <script src="../../html/vendor/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../../html/vendor/jQueryFormStyler/dist/jquery.formstyler.min.js"></script>
+    <script src="../html/vendor/bootstrap-5.0.2/js/bootstrap.min.js"></script>
+    <script src="../html/vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../html/vendor/jQueryFormStyler/dist/jquery.formstyler.min.js"></script>
 
-    <script>
-        let currentIndex = 0;
-        const slider = document.getElementById('custom-slider');
-        const items = document.querySelectorAll('.slider-item');
-        const itemsToShow = Math.floor(slider.parentElement.clientWidth / 200); // Calculate the number of items to show based on the container width
+    <script src="../html/js/countUp.min.js"></script>
 
-        function moveSlide(direction) {
-            const totalItems = items.length;
-
-            currentIndex += direction;
-
-            if (currentIndex < 0) {
-                currentIndex = totalItems - itemsToShow;
-            } else if (currentIndex >= totalItems - itemsToShow + 1) {
-                currentIndex = 0;
-            }
-
-            const offset = -currentIndex * 200; // 200 is the width of each item
-            slider.style.transform = `translateX(${offset}px)`;
-        }
-
-        window.addEventListener('resize', () => {
-            currentIndex = 0; // Reset index on resize to prevent misalignment
-            moveSlide(0); // Recalculate items to show and update slide position
-        });
-
-    </script>
-
-    <script src="../../html/vendor/fancybox/jquery.fancybox.min.js"></script>
-    <script src="../../html/js/main.js?2"></script>
-    <script src="../../html/js/custom.js?2"></script>
-    <script type="text/javascript" src="../../assets/snippets/eFavorite/js/eFavorite.js"></script>
+    <script src="../html/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="../html/js/main.js?2"></script>
+    <script src="../html/js/custom.js?2"></script>
+    <script type="text/javascript" src="../assets/snippets/eFavorite/js/eFavorite.js"></script>
     <script>var eFavorite_favorite = new eFavorite();
         eFavorite_favorite.params.lifetime = "2592000";
         eFavorite_favorite.params.id = "favorite";
         $(document).ready(function () { eFavorite_favorite.init() })</script>
-    <script src="../html/js/catalog.js"></script>
-
 </body>
 
 </html>
